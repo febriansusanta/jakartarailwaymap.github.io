@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Jakarta Railway Map</title>
+  <meta name=viewport content="width=device-width initial-scale=1">
+  <link rel="stylesheet" href="./dist/themes/css/deep-insights.css" />
+  <script src="./dist/deep-insights.uncompressed.js"></script>
+   <!--link rel="stylesheet" href="http://libs.cartocdn.com/di.js/v0/themes/css/deep-insights.css" />
+    <script src=" http://libs.cartocdn.com/di.js/v0/deep-insights.uncompressed.js"></script-->
+  <style type="text/css">
+    html, body {
+      position:relative;
+      height: 100%;
+      padding: 0;
+      margin: 0;
+    }
+  </style>
+ 
+</head>
+
+<body>
+  <div class="Dashboard-canvas" id="dashboard"></div>
+	
+  <script>
+    window.onload = function() {
+	
+	//set vizJSON
+      var vizJSON = 'https://febrianfsusanta.carto.com/api/v3/viz/21b2959a-f7d6-4fa9-a95b-775a3329e104/viz.json';
+	  
+	// createCategoryWidget  
+      cartodb.deepInsights.createDashboard('#dashboard', vizJSON, {
+        no_cdn: false,
+		cartodb_logo: false,
+          share_urls: true
+      }, function(err, dashboard) {
+	  
+	//getMap object
+         var map = dashboard.getMap();
+	
+	//set widgets parameters
+         var params = {
+            "title": "Custom category",
+            "column": "petak2",
+            "aggregationColumn": "petak2",
+            "aggregation": "count",
+        };
+        // adds a category using column `test` from the third layer
+        dashboard.createCategoryWidget(params, map.getLayer(2));
+        
+        setTimeout(function() {
+          // add a histogram and a formula
+          params = {
+              "title": "Custom histogram",
+              "type": "histogram",
+              "column": "jarak",
+              "operation": "avg",
+              "bins": 15
+          }
+          dashboard.createHistogramWidget(params, map.getLayer(2));
+        }, 2000);
+        setTimeout(function() {
+          params = {
+              "title": "Custom formula",
+              "column": "cartodb_id",
+              "operation": "count"
+          }
+          dashboard.createFormulaWidget(params, map.getLayer(1));
+        }, 5000);
+      });
+    }
+  </script>
+</body>
+
+</html>

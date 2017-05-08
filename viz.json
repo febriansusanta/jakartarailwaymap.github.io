@@ -1,0 +1,495 @@
+{
+  "bounds": [
+    [-6.96821, 105.816],
+    [-5.92505, 107.604]
+  ],
+  "center": "[-6.4466267125000005,106.71010849999999]",
+  "datasource": {
+    "user_name": "febrianfsusanta",
+    "maps_api_template": "https://{user}.carto.com:443",
+    "stat_tag": "21b2959a-f7d6-4fa9-a95b-775a3329e104"
+  },
+  "description": null,
+  "options": {
+    "legends": true,
+    "scrollwheel": true,
+    "layer_selector": true,
+    "dashboard_menu": true
+  },
+  "id": "21b2959a-f7d6-4fa9-a95b-775a3329e104",
+  "layers": [{
+    "id": "edae94c5-beaf-4167-a2f9-30d2a92864aa",
+    "type": "tiled",
+    "options": {
+      "type": "Tiled",
+      "category": "CARTO",
+      "urlTemplate": "https://cartodb-basemaps-{s}.global.ssl.fastly.net/dark_all/{z}/{x}/{y}.png",
+      "subdomains": "abcd",
+      "minZoom": "0",
+      "maxZoom": "18",
+      "name": "Dark matter (labels below)",
+      "className": "dark_matter_rainbow",
+      "attribution": "&copy; <a href=\"http://www.openstreetmap.org/copyright\">OpenStreetMap</a> contributors",
+      "selected": true,
+      "val": "dark_matter_rainbow",
+      "label": "Dark matter (labels below)",
+      "default": false,
+      "highlighted": true
+    }
+  }, {
+    "id": "6646b46c-6d7d-4b44-9626-8d59a6f66d94",
+    "legends": [{
+      "conf": {
+        "columns": ["title"]
+      },
+      "created_at": "2017-04-05T20:45:40+00:00",
+      "definition": {
+        "categories": [{
+          "title": "Stasiun Kelas 1",
+          "color": "#38A6A5"
+        }, {
+          "title": "Stasiun Kelas 2",
+          "color": "#1D6996"
+        }, {
+          "title": "Stasiun Kelas 3",
+          "color": "#5F4690"
+        }, {
+          "title": "Stasiun BESAR A",
+          "color": "#0F8554"
+        }, {
+          "title": "Stasiun BESAR B",
+          "color": "#EDAD08"
+        }, {
+          "title": "Stasiun BESAR C",
+          "color": "#73AF48"
+        }]
+      },
+      "id": "89d5da63-3f38-4d70-b7f4-a15f8c2e45a7",
+      "layer_id": "6646b46c-6d7d-4b44-9626-8d59a6f66d94",
+      "post_html": "",
+      "pre_html": "",
+      "title": "",
+      "type": "custom",
+      "updated_at": "2017-04-05T23:18:20+00:00"
+    }],
+    "type": "CartoDB",
+    "infowindow": {
+      "template_name": "infowindow_light",
+      "fields": [{
+        "name": "title",
+        "title": true,
+        "position": null
+      }, {
+        "name": "x_label",
+        "title": true,
+        "position": null
+      }, {
+        "name": "y_label",
+        "title": true,
+        "position": null
+      }],
+      "maxHeight": 180,
+      "template": "<div class=\"CDB-infowindow CDB-infowindow--light js-infowindow\">\n  <div class=\"CDB-infowindow-close js-close\"></div>\n  <div class=\"CDB-infowindow-container\">\n    <div class=\"CDB-infowindow-bg\">\n      <div class=\"CDB-infowindow-inner\">\n        {{#loading}}\n          <div class=\"CDB-Loader js-loader is-visible\"></div>\n        {{/loading}}\n        <ul class=\"CDB-infowindow-list js-content\">\n          {{#content.fields}}\n          <li class=\"CDB-infowindow-listItem\">\n            {{#title}}<h5 class=\"CDB-infowindow-subtitle\">{{title}}</h5>{{/title}}\n            {{#value}}<h4 class=\"CDB-infowindow-title\">{{{ value }}}</h4>{{/value}}\n            {{^value}}<h4 class=\"CDB-infowindow-title\">null</h4>{{/value}}\n          </li>\n          {{/content.fields}}\n        </ul>\n      </div>\n    </div>\n    <div class=\"CDB-hook\">\n      <div class=\"CDB-hook-inner\"></div>\n    </div>\n  </div>\n</div>\n",
+      "alternative_names": {
+        "title": "Nama Stasiun",
+        "x_label": "Koordinat X",
+        "y_label": "Koordinat Y"
+      },
+      "width": 226,
+      "headerColor": {
+        "color": {
+          "fixed": "#35AAE5",
+          "opacity": 1
+        }
+      },
+      "template_type": "mustache"
+    },
+    "tooltip": {
+      "fields": [],
+      "template_name": "tooltip_dark",
+      "template": "<div class=\"CDB-Tooltip CDB-Tooltip--isDark\">\n  <ul class=\"CDB-Tooltip-list\">\n    {{#fields}}\n      <li class=\"CDB-Tooltip-listItem\">\n        {{#title}}\n          <h3 class=\"CDB-Tooltip-listTitle\">{{{ title }}}</h3>\n        {{/title}}\n        <h4 class=\"CDB-Tooltip-listText\">{{{ value }}}</h4>\n      </li>\n    {{/fields}}\n  </ul>\n</div>\n",
+      "template_type": "mustache",
+      "alternative_names": {
+        "title": ""
+      }
+    },
+    "visible": true,
+    "options": {
+      "layer_name": "Kelas Stasiun",
+      "cartocss": "#layer {\n  marker-width: 7;\n  marker-fill: ramp([kelas_stasiun], (#5F4690, #1D6996, #38A6A5, #0F8554, #73AF48, #EDAD08), (\"3\", \"2\", \"1\", \"BESAR A\", \"BESAR C\", \"BESAR B\"), \"=\");\n  marker-fill-opacity: 1;\n  marker-allow-overlap: true;\n  marker-line-width: 0;\n  marker-line-color: #FFF;\n  marker-line-opacity: 1;\n}",
+      "cartocss_version": "2.1.1",
+      "attribution": "",
+      "source": "a0"
+    }
+  }, {
+    "id": "7afc1aaa-7d75-42f6-a631-a137ca42043c",
+    "legends": [{
+      "conf": {
+        "columns": ["title"]
+      },
+      "created_at": "2017-04-10T07:49:55+00:00",
+      "definition": {
+        "categories": [{
+          "title": "Aktif",
+          "color": "#00f9d9"
+        }, {
+          "title": "Non Aktif",
+          "color": "#ff051d"
+        }]
+      },
+      "id": "82213195-9c67-4565-9d4f-fe9849fc38ba",
+      "layer_id": "7afc1aaa-7d75-42f6-a631-a137ca42043c",
+      "post_html": "",
+      "pre_html": "",
+      "title": "",
+      "type": "custom",
+      "updated_at": "2017-04-10T07:50:01+00:00"
+    }],
+    "type": "CartoDB",
+    "infowindow": {
+      "template_name": "infowindow_dark",
+      "maxHeight": 180,
+      "template": "<div class=\"CDB-infowindow CDB-infowindow--dark js-infowindow\" style=\"background:#2E3C43\">\n  <div class=\"CDB-infowindow-close js-close\"></div>\n  <div class=\"CDB-infowindow-container\">\n    <div class=\"CDB-infowindow-bg\">\n      <div class=\"CDB-infowindow-inner\">\n        {{#loading}}\n          <div class=\"CDB-Loader js-loader is-visible\"></div>\n        {{/loading}}\n        <ul class=\"CDB-infowindow-list js-content\">\n          {{#content.fields}}\n          <li class=\"CDB-infowindow-listItem\">\n            {{#title}}<h5 class=\"CDB-infowindow-subtitle\">{{title}}</h5>{{/title}}\n            {{#value}}<h4 class=\"CDB-infowindow-title\">{{{ value }}}</h4>{{/value}}\n            {{^value}}<h4 class=\"CDB-infowindow-title\">null</h4>{{/value}}\n          </li>\n          {{/content.fields}}\n        </ul>\n      </div>\n    </div>\n    <div class=\"CDB-hook\">\n      <div class=\"CDB-hook-inner\"></div>\n    </div>\n  </div>\n</div>\n",
+      "alternative_names": {
+        "jalur": "",
+        "petak1": "Statiun awal",
+        "petak2": "Stasiun akhir",
+        "lintasid": "Lintas Jalur",
+        "jarak": "Panjang jalur"
+      },
+      "fields": [{
+        "name": "petak1",
+        "title": true,
+        "position": null
+      }, {
+        "name": "petak2",
+        "title": true,
+        "position": null
+      }, {
+        "name": "lintasid",
+        "title": true,
+        "position": null
+      }, {
+        "name": "jarak",
+        "title": true,
+        "position": null
+      }],
+      "width": 226,
+      "headerColor": {
+        "color": {
+          "fixed": "#35AAE5",
+          "opacity": 1
+        }
+      },
+      "template_type": "mustache"
+    },
+    "tooltip": {
+      "template_name": "none",
+      "template": "",
+      "template_type": "mustache"
+    },
+    "visible": true,
+    "options": {
+      "layer_name": "Jalur Stasiun",
+      "cartocss": "#layer {\n  line-width: 1.5;\n  line-color: ramp([status], (#00f9d9, #ff051d), (\"Aktif\", \"Non Aktif\"), \"=\");\n}",
+      "cartocss_version": "2.1.1",
+      "attribution": "",
+      "source": "b0"
+    }
+  }, {
+    "id": "e6d668fe-d44a-4620-9f51-35abbd76e08a",
+    "legends": [{
+      "conf": {
+        "columns": ["title"]
+      },
+      "created_at": "2017-04-05T23:09:17+00:00",
+      "definition": {
+        "categories": [{
+          "title": "Jatinegara-Bogor",
+          "color": "#5F4690"
+        }, {
+          "title": "Bogor-Jatinegara",
+          "color": "#1D6996"
+        }, {
+          "title": "Bogor-Jakarta Kota",
+          "color": "#38A6A5"
+        }, {
+          "title": "Jakarta Kota-Bogor",
+          "color": "#0F8554"
+        }, {
+          "title": "Rangkas Bitung-Tanah Abang",
+          "color": "#73AF48"
+        }, {
+          "title": "Tanah Abang-Rangkas Bitung",
+          "color": "#EDAD08"
+        }, {
+          "title": "Jakarta Kota-Bekasi",
+          "color": "#E17C05"
+        }, {
+          "title": "Bekasi-Jakarta Kota",
+          "color": "#CC503E"
+        }, {
+          "title": "Duri-Tangerang",
+          "color": "#94346E"
+        }, {
+          "title": "Tangerang-Duri",
+          "color": "#6F4070"
+        }]
+      },
+      "id": "902d1be9-9808-4526-b2af-1b333c781717",
+      "layer_id": "e6d668fe-d44a-4620-9f51-35abbd76e08a",
+      "post_html": "",
+      "pre_html": "",
+      "title": "Rute Jalur",
+      "type": "custom",
+      "updated_at": "2017-04-05T23:19:01+00:00"
+    }],
+    "type": "torque",
+    "options": {
+      "visible": true,
+      "table_name": "gapeka_2",
+      "user_name": "febrianfsusanta",
+      "attribution": "",
+      "layer_name": "Waktu Perjalanan Kereta"
+    },
+    "cartocss": "Map {\n  -torque-frame-count: 1024;\n  -torque-animation-duration: 60;\n  -torque-time-attribute: \"gmt\";\n  -torque-aggregation-function: \"CDB_Math_Mode(value)\";\n  -torque-resolution: 2;\n  -torque-data-aggregation: linear;\n}\n#layer {\n  marker-width: 3;\n  marker-fill: ramp([value], (#5F4690, #1D6996, #38A6A5, #0F8554, #73AF48, #EDAD08, #E17C05, #CC503E, #94346E, #6F4070, #666666), (1, 2, 3, 4, 5, 6, 7, 8, 9, 10), \"=\");\n  marker-fill-opacity: 1;\n  marker-line-width: 1;\n  marker-line-color: #FFF;\n  marker-line-opacity: 1;\n  comp-op: multiply;\n}\n#layer[frame-offset=1] {\n  marker-width: 5;\n  marker-fill-opacity: 0.5;\n}\n#layer[frame-offset=2] {\n  marker-width: 7;\n  marker-fill-opacity: 0.25;\n}",
+    "cartocss_version": "2.1.1",
+    "sql": "SELECT * FROM gapeka_2",
+    "source": "c0",
+    "sql_wrap": "select *, (CASE WHEN \"jalur\" = 'Jatinegara-Bogor' THEN 1 WHEN \"jalur\" = 'Bogor-Jatinegara' THEN 2 WHEN \"jalur\" = 'Bogor-Jakarta Kota' THEN 3 WHEN \"jalur\" = 'Jakarta Kota-Bogor' THEN 4 WHEN \"jalur\" = 'Rangkas Bitung-Tanah Abang' THEN 5 WHEN \"jalur\" = 'Tanah Abang-Rangkas Bitung' THEN 6 WHEN \"jalur\" = 'Jakarta Kota-Bekasi' THEN 7 WHEN \"jalur\" = 'Bekasi-Jakarta Kota' THEN 8 WHEN \"jalur\" = 'Duri-Tangerang' THEN 9 WHEN \"jalur\" = 'Tangerang-Duri' THEN 10  ELSE 11  END) as value FROM (<%= sql %>) __wrapped"
+  }],
+  "likes": 0,
+  "map_provider": "leaflet",
+  "overlays": [{
+    "type": "share",
+    "order": 1,
+    "options": {
+      "display": true,
+      "x": 20,
+      "y": 20
+    },
+    "template": ""
+  }, {
+    "type": "search",
+    "order": 2,
+    "options": {
+      "display": true,
+      "x": 60,
+      "y": 20
+    },
+    "template": ""
+  }, {
+    "type": "zoom",
+    "order": 3,
+    "options": {
+      "display": true,
+      "x": 20,
+      "y": 20
+    },
+    "template": "<a href=\"#zoom_in\" class=\"zoom_in\">+</a> <a href=\"#zoom_out\" class=\"zoom_out\">-</a>"
+  }, {
+    "type": "loader",
+    "order": 4,
+    "options": {
+      "display": true,
+      "x": 20,
+      "y": 150
+    },
+    "template": "<div class=\"loader\" original-title=\"\"></div>"
+  }, {
+    "type": "logo",
+    "order": 5,
+    "options": {
+      "display": true,
+      "x": 10,
+      "y": 40
+    },
+    "template": ""
+  }],
+  "title": "Jakarta Railway Map",
+  "updated_at": "2017-04-17T06:53:58+00:00",
+  "user": {
+    "fullname": "Febrian Fitryanik Susanta",
+    "avatar_url": "https://s3.amazonaws.com/com.cartodb.users-assets.production/production/febrianfsusanta/assets/20170406102519IMG_20150126_141958_HDR.jpg",
+    "profile_url": "https://febrianfsusanta.carto.com"
+  },
+  "version": "3.0.0",
+  "widgets": [{
+    "id": "1f9998ff-8d42-4d32-b679-3cc0c0d677af",
+    "type": "category",
+    "title": "Kelompok Stasiun",
+    "order": 1,
+    "layer_id": "6646b46c-6d7d-4b44-9626-8d59a6f66d94",
+    "options": {
+      "column": "kelompok_stasiun",
+      "aggregation_column": "",
+      "aggregation": "count",
+      "sync_on_data_change": true,
+      "sync_on_bbox_change": true,
+      "schema": {},
+      "aggregate": {
+        "attribute": "",
+        "operator": "count"
+      },
+      "suffix": " Stasiun",
+      "prefix": ""
+    },
+    "style": {
+      "widget_style": {
+        "definition": {
+          "color": {
+            "fixed": "#9DE0AD",
+            "opacity": 1
+          }
+        }
+      },
+      "auto_style": {
+        "custom": false,
+        "allowed": true
+      }
+    },
+    "source": {
+      "id": "a0"
+    }
+  }, {
+    "id": "c658b41c-1141-436b-bd4d-3d7e63ac3cc2",
+    "type": "category",
+    "title": "Status Stasiun",
+    "order": 2,
+    "layer_id": "6646b46c-6d7d-4b44-9626-8d59a6f66d94",
+    "options": {
+      "column": "status_stasiun",
+      "aggregation_column": "",
+      "aggregation": "count",
+      "sync_on_data_change": true,
+      "sync_on_bbox_change": true,
+      "schema": {},
+      "aggregate": {
+        "attribute": "",
+        "operator": "count"
+      },
+      "suffix": " Stasiun",
+      "prefix": ""
+    },
+    "style": {
+      "widget_style": {
+        "definition": {
+          "color": {
+            "fixed": "#9DE0AD",
+            "opacity": 1
+          }
+        }
+      },
+      "auto_style": {
+        "custom": false,
+        "allowed": true
+      }
+    },
+    "source": {
+      "id": "a0"
+    }
+  }, {
+    "id": "507b6344-e0ba-4461-8d91-742f3bbafc83",
+    "type": "formula",
+    "title": "jarak",
+    "order": 4,
+    "layer_id": "7afc1aaa-7d75-42f6-a631-a137ca42043c",
+    "options": {
+      "column": "jarak",
+      "operation": "avg",
+      "sync_on_data_change": true,
+      "sync_on_bbox_change": true,
+      "schema": {},
+      "prefix": "",
+      "suffix": "km",
+      "description": "Jarak rata - rata jalur dalam km"
+    },
+    "style": {
+      "widget_style": {
+        "definition": {
+          "color": {
+            "fixed": "#9DE0AD",
+            "opacity": 1
+          }
+        }
+      },
+      "auto_style": {
+        "custom": true,
+        "allowed": true,
+        "definition": {
+          "color": {
+            "attribute": "jarak",
+            "quantification": "quantiles",
+            "range": ["#ffc6c4", "#f4a3a8", "#e38191", "#cc607d", "#ad466c", "#8b3058", "#672044"]
+          }
+        }
+      }
+    },
+    "source": {
+      "id": "b0"
+    }
+  }, {
+    "id": "7eeee9ac-512f-48dd-bef5-68367d8895c5",
+    "type": "time-series",
+    "title": "time_date__t",
+    "order": 5,
+    "layer_id": "e6d668fe-d44a-4620-9f51-35abbd76e08a",
+    "options": {
+      "column": "gmt",
+      "bins": 256,
+      "animated": true,
+      "sync_on_data_change": true,
+      "sync_on_bbox_change": true
+    },
+    "style": {
+      "widget_style": {
+        "definition": {
+          "color": {
+            "fixed": "#F2CC8F",
+            "opacity": 1
+          }
+        }
+      },
+      "auto_style": {
+        "custom": false,
+        "allowed": false
+      }
+    },
+    "source": {
+      "id": "c0"
+    }
+  }],
+  "zoom": 8,
+  "analyses": [{
+    "id": "b0",
+    "type": "source",
+    "params": {
+      "query": "SELECT * FROM line_stasiun_ka_1_1"
+    },
+    "options": {
+      "table_name": "line_stasiun_ka_1_1",
+      "simple_geom": "line"
+    }
+  }, {
+    "id": "c0",
+    "type": "source",
+    "params": {
+      "query": "SELECT * FROM gapeka_2"
+    },
+    "options": {
+      "table_name": "gapeka_2",
+      "simple_geom": "point"
+    }
+  }, {
+    "id": "a0",
+    "type": "source",
+    "params": {
+      "query": "SELECT * FROM point_stasiun_ka_ebie"
+    },
+    "options": {
+      "table_name": "point_stasiun_ka_ebie",
+      "simple_geom": "point"
+    }
+  }],
+  "vector": false
+}

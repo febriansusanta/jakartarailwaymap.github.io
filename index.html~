@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>Deep-Insights.js | Populated Places</title>
+    <meta name=viewport content="width=device-width initial-scale=1">
+    <link rel="stylesheet" href="/dist/themes/css/deep-insights.css" />
+    <script src="/dist/deep-insights.uncompressed.js"></script>
+    <!--link rel="stylesheet" href="http://libs.cartocdn.com/di.js/v0/themes/css/deep-insights.css" />
+    <script src=" http://libs.cartocdn.com/di.js/v0/deep-insights.uncompressed.js"></script-->
+    <style type="text/css">
+      html, body {
+        position:relative;
+        height: 100%;
+        padding: 0;
+        margin: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="dashboard"></div>
+
+    <script>
+      window.onload = function() {
+        cartodb.deepInsights.createDashboard('#dashboard', 'https://febrianfsusanta.carto.com/api/v3/viz/21b2959a-f7d6-4fa9-a95b-775a3329e104/viz.json', {
+          no_cdn: false,
+          cartodb_logo: false,
+          share_urls: true
+        });
+      }
+    </script>
+  </body>
+</html>
